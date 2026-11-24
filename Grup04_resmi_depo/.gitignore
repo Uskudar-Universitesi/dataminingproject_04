@@ -1,0 +1,12 @@
+# Veri depoya konmaz: defter Inside Airbnb'den indirir
+*.csv
+*.csv.gz
+# Defterin ürettiği ara dosyalar (Proje 2 bunları yeniden üretir)
+*.joblib
+*.arff
+weka.jar
+_weka/
+# Jupyter / Colab / Python
+.ipynb_checkpoints/
+__pycache__/
+.DS_Store
