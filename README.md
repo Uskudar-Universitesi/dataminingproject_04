@@ -63,6 +63,12 @@ https://data.insideairbnb.com/turkey/marmara/istanbul/<SNAPSHOT>/data/listings.c
 
 Ayrıntılar, grafikler ve bütün sayılar `BIL545_Proje1_Birlesik.ipynb` defterinde.
 
+## Etkileşimli sayfalar
+| Sayfa | Ne için |
+|---|---|
+| [Kontrol sayfası](https://claude.ai/artifact/DfzxDyiwa55GhmZoGQKZnn) | Bölümlerin durumunu, resmi depodan okunan teslim kontrolünü ve düzeltme geçmişini düzenli olarak kontrol etmek için kullandık. |
+| [Fiyat atölyesi](https://claude.ai/artifact/AY18JALeHhx2DQhFs5dADJ) | Verimiz üzerinde beş modeli tarayıcıda eğitip bölme yöntemlerini karşılaştıran bir sayfa yaptık. Veriye etkilerini izledik. |
+
 ## Katkı beyanı
 Her üyenin hangi alt başlıklarda ve hangi işlerde (kod, analiz, yorum, sunum hazırlığı) çalıştığı. Katkı puanı bu beyana göre verilir: somutluk %30, pay %30, GitHub commit geçmişiyle tutarlılık %25, sunumla tutarlılık %15.
 
@@ -73,3 +79,8 @@ Her üyenin hangi alt başlıklarda ve hangi işlerde (kod, analiz, yorum, sunum
 | Elif Öztürk | **Bölüm 3 (3.1–3.4):** veri küpü ve kavram hiyerarşileri, dilimleme / yukarı toplama ve Simpson paradoksu analizi, işlem tablosu ve ayrıklaştırma (seçenek B), Apriori ve FP-Growth, lift–Kulczynski karşılaştırması, kuralların alan bilgisiyle yorumu, Weka Apriori ile birebir kontrol; Wu, Chen ve Han (2010) okuma notu; kod, analiz ve yorumlar; sunum hazırlığı. | Bölüm 3 |
 | Alicem Elverdi | **Ek paket 1 (E1.1–E1.3):** budama eğrisi ve bir standart hata kuralı, ağaç sayısı ile test ve OOB hatası, Gini önemi ile permütasyon öneminin rastgele kontrol sütunlarıyla karşılaştırılması; kod, analiz ve yorumlar; sunum hazırlığı. | Ek paket 1 |
 | Nurseda Akgül | **Ek paket 2 (E2.1–E2.3):** filtre, sarmalayıcı (RFE) ve gömülü öznitelik seçimi, ev sahibine göre alt örneklemlerle kararlılık analizi, seçimin katkısının Nadeau–Bengio testiyle ölçülmesi ve K duyarlılığı; Meinshausen ve Bühlmann (2010) okuma notu; kod, analiz ve yorumlar; sunum hazırlığı. | Ek paket 2 |
+
+## Yapay zekâ beyanı
+**Barış Refik Aykent:** Anthropic'in Claude modelini (Claude Code ortamında) kullandım. (1) Öğrenme: Bölüm 2'deki modelleri, istatistik testleri ve sızıntı kavramını anlamak için açıklama ve örnek istedim. (2) Kod: 2.1–2.5'in kodunu Claude yazdı ve çalıştırdı. Model seçimi, ana testin önceden seçilmesi ve Proje 2'ye aktarılacak çıktılar gibi kararları ben verdim. (3) Yorumlar: Bölüm 2 yorumlarının taslaklarını Claude yazdı. Ben okuyup sadeleştirme ve düzeltme istedim; sayıları defter çıktılarıyla karşılaştırarak onayladım. (4) Ortak bölümler: Varsayım defteri ve kaynakların derlenmesinde ve README'de Claude'u kullandım.
+
+_Diğer üyelerin beyanları eklenecek._
