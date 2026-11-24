@@ -7,7 +7,7 @@
 **Hedef:** Fiyat dilimi (`price` sütunundan türetilen sınıflar)  
 **Grup tipi:** 5 kişi (temel kapsam + Ek paket 1 + Ek paket 2)
 
-> **Depolar hakkında:** Çalışma sürecinde taslak (draft) depo olarak [efulii/datamining](https://github.com/efulii/datamining) kullanıldı; bölümlerin ayrı defterleri, ara sürümler ve düzeltme geçmişi orada. Bu depo (`dataminingproject_04`) ise temiz teslim için hazırlandı: yalnız birleşik teslim defterini ve README'yi içerir.
+> **Depolar hakkında:** Çalışma sürecinde taslak (draft) depo olarak [efulii/datamining](https://github.com/efulii/datamining) kullanıldı; bölümlerin ayrı defterleri, ara sürümler ve düzeltme geçmişi orada. Bu depo (`dataminingproject_04`) ise temiz teslim için hazırlandı: birleşik teslim defterini, README'yi ve çalıştırma için gereken sürüm bilgisini içerir.
 
 ## Grup
 | | Ad Soyad | Öğrenci No |
@@ -37,15 +37,25 @@ https://data.insideairbnb.com/turkey/marmara/istanbul/<SNAPSHOT>/data/listings.c
 ```
 
 ## Defterlerin çalıştırılması
-1. `BIL545_Proje1_Birlesik.ipynb` dosyasını Colab'da açın: [Colab'da aç](https://colab.research.google.com/github/Uskudar-Universitesi/dataminingproject_04/blob/main/BIL545_Proje1_Birlesik.ipynb)
+1. `proje1/BIL545_Proje1_Birlesik.ipynb` dosyasını Colab'da açın: [Colab'da aç](https://colab.research.google.com/github/Uskudar-Universitesi/dataminingproject_04/blob/main/proje1/BIL545_Proje1_Birlesik.ipynb)
 2. **Çalışma Zamanı → Tümünü çalıştır** (yaklaşık 45 dakika). Sürümler ilk hücrede yazdırılır, tohum `SEED = 42`.
-3. Defterdeki sonuçlar Colab'ın scikit-learn 1.6.1 ve pandas 2.2.3 sürümleriyle üretildi. Bölüm 3'te mlxtend 0.23.4'e sabitlendi; daha yeni mlxtend scikit-learn'ü yükseltip sonuçları değiştirebilir.
+3. Defterdeki sonuçlar Colab'ın scikit-learn 1.6.1 ve pandas 2.2.3 sürümleriyle üretildi; bütün sürümler `requirements.txt` dosyasında. Bölüm 3'te mlxtend 0.23.4'e sabitlendi; daha yeni mlxtend scikit-learn'ü yükseltip sonuçları değiştirebilir. Yerelde çalıştırmak için: `pip install -r requirements.txt`.
 4. Proje 2, Proje 1'in çıktılarını (`p1_temiz_veri.csv`, `p1_hat.joblib`) kullanır.
 
-| Dosya | İçerik | Teslim |
+### Depo yapısı
+```
+dataminingproject_04/
+├── README.md            bu dosya
+├── requirements.txt     sonuçların üretildiği paket sürümleri
+├── .gitignore           veri ve ara dosyaların depoya girmesini engeller
+└── proje1/
+    └── BIL545_Proje1_Birlesik.ipynb
+```
+
+| Klasör | İçerik | Teslim |
 |---|---|---|
-| `BIL545_Proje1_Birlesik.ipynb` | Proje 1 defteri (vize): Bölüm 1–3, Ek paket 1–2, beyanlar | 8. hafta |
-| Proje 2 defteri | Proje 2 (final) | 14. hafta |
+| `proje1/` | Proje 1 defteri (vize): Bölüm 1–3, Ek paket 1–2, varsayım defteri, katkı ve yapay zekâ beyanları, kaynaklar | 8. hafta |
+| `proje2/` | Proje 2 defteri (final) | 14. hafta |
 
 ## Etkileşimli sayfalar
 | Sayfa | Ne için |
@@ -69,7 +79,7 @@ https://data.insideairbnb.com/turkey/marmara/istanbul/<SNAPSHOT>/data/listings.c
 
 **Sınırlar:** Elimizdeki fiyat, ev sahibinin istediği fiyat; gerçekten kiralanan fiyatı ya da doluluğu bilmiyoruz. Veri tek bir günün (25 Eylül 2026) fotoğrafı. Bulduklarımız ilişki, neden-sonuç değil: büyük bir ev açmak fiyatı yükseltmiyor, büyük evler zaten pahalı.
 
-Ayrıntılar, grafikler ve bütün sayılar `BIL545_Proje1_Birlesik.ipynb` defterinde.
+Ayrıntılar, grafikler ve bütün sayılar `proje1/BIL545_Proje1_Birlesik.ipynb` defterinde.
 
 ## Katkı beyanı
 Her üyenin hangi alt başlıklarda ve hangi işlerde (kod, analiz, yorum, sunum hazırlığı) çalıştığı. Katkı puanı bu beyana göre verilir: somutluk %30, pay %30, GitHub commit geçmişiyle tutarlılık %25, sunumla tutarlılık %15.
@@ -84,5 +94,7 @@ Her üyenin hangi alt başlıklarda ve hangi işlerde (kod, analiz, yorum, sunum
 
 ## Yapay zekâ beyanı
 **Barış Refik Aykent:** Anthropic'in Claude modelini (Claude Code ortamında) kullandım. (1) Öğrenme: Bölüm 2'deki modelleri, istatistik testleri ve sızıntı kavramını anlamak için açıklama ve örnek istedim. (2) Kod: 2.1–2.5'in kodunu Claude yazdı ve çalıştırdı. Model seçimi, ana testin önceden seçilmesi ve Proje 2'ye aktarılacak çıktılar gibi kararları ben verdim. (3) Yorumlar: Bölüm 2 yorumlarının taslaklarını Claude yazdı. Ben okuyup sadeleştirme ve düzeltme istedim; sayıları defter çıktılarıyla karşılaştırarak onayladım. (4) Ortak bölümler: Varsayım defteri ve kaynakların derlenmesinde ve README'de Claude'u kullandım.
+
+**Alicem Elverdi:** Anthropic'in Claude modelini (claude.ai üzerinden) kullandım. **(1) Öğrenme:** Projenin amacını, sızıntı kavramını ve İstanbul Airbnb verisiyle neyi neden yaptığımızı anlamak için açıklama istedim. Yazılan kodun her satırının ne işe yaradığını senaryo üzerinden anlattırdım. **(2) Kod:** Ek paket 1'in (E1.1 budama eğrisi, E1.2 doyum eğrisi, E1.3 öznitelik önemi) kodunu Claude, grubun ortak hattının (`X`, `y`, `CV_GRUP`, 2.5'te seçilen rastgele orman) üzerine kurdu ve test etti. Ek 1'i grubun kurulumuna (ev sahibine göre bölme, makro F1, seçilen model) bağlı kalarak yapma kararını ben verdim. **(3) Yorumlar:** Ek 1'deki üç yorumun taslağını Claude yazdı. Ben okuyup sadeleştirme ve düzeltme istedim ve sayıları Colab'daki defter çıktılarıyla karşılaştırarak onayladım. **(4) Diğer:** Bu bölümle ilgili iki kaynağın (Breiman 2001; Strobl vd. 2007) eklenmesinde Claude'u kullandım. Projenin ilk aşamasında veri yükleme, 1.1 ve 1.2 için de Claude ile bir deneme defteri hazırladım; grup sonunda başka bir sürümle devam etti.
 
 _Diğer üyelerin beyanları eklenecek._
