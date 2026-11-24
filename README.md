@@ -7,6 +7,8 @@
 **Hedef:** Fiyat dilimi (`price` sütunundan türetilen sınıflar)  
 **Grup tipi:** 5 kişi (temel kapsam + Ek paket 1 + Ek paket 2)
 
+> **Depolar hakkında:** Çalışma sürecinde taslak (draft) depo olarak [efulii/datamining](https://github.com/efulii/datamining) kullanıldı; bölümlerin ayrı defterleri, ara sürümler ve düzeltme geçmişi orada. Bu depo (`dataminingproject_04`) ise temiz teslim için hazırlandı: yalnız birleşik teslim defterini ve README'yi içerir.
+
 ## Grup
 | | Ad Soyad | Öğrenci No |
 |---|---|---|
@@ -45,6 +47,12 @@ https://data.insideairbnb.com/turkey/marmara/istanbul/<SNAPSHOT>/data/listings.c
 | `BIL545_Proje1_Birlesik.ipynb` | Proje 1 defteri (vize): Bölüm 1–3, Ek paket 1–2, beyanlar | 8. hafta |
 | Proje 2 defteri | Proje 2 (final) | 14. hafta |
 
+## Etkileşimli sayfalar
+| Sayfa | Ne için |
+|---|---|
+| [Kontrol sayfası](https://claude.ai/artifact/DfzxDyiwa55GhmZoGQKZnn) | Bölümlerin durumunu, resmi depodan okunan teslim kontrolünü ve düzeltme geçmişini düzenli olarak kontrol etmek için kullandık. |
+| [Fiyat atölyesi](https://claude.ai/artifact/AY18JALeHhx2DQhFs5dADJ) | Verimiz üzerinde beş modeli tarayıcıda eğitip bölme yöntemlerini karşılaştıran bir sayfa yaptık. Veriye etkilerini izledik. |
+
 ## Sonuç özeti
 İstanbul'daki 24.553 Airbnb ilanını fiyatına göre üç dilime ayırdık (ucuz < 2.750 TL, orta, pahalı ≥ 5.100 TL) ve ilanın özelliklerinden hangi dilimde olduğunu tahmin etmeye çalıştık. Kısaca öğrendiklerimiz:
 
@@ -62,12 +70,6 @@ https://data.insideairbnb.com/turkey/marmara/istanbul/<SNAPSHOT>/data/listings.c
 **Sınırlar:** Elimizdeki fiyat, ev sahibinin istediği fiyat; gerçekten kiralanan fiyatı ya da doluluğu bilmiyoruz. Veri tek bir günün (25 Eylül 2026) fotoğrafı. Bulduklarımız ilişki, neden-sonuç değil: büyük bir ev açmak fiyatı yükseltmiyor, büyük evler zaten pahalı.
 
 Ayrıntılar, grafikler ve bütün sayılar `BIL545_Proje1_Birlesik.ipynb` defterinde.
-
-## Etkileşimli sayfalar
-| Sayfa | Ne için |
-|---|---|
-| [Kontrol sayfası](https://claude.ai/artifact/DfzxDyiwa55GhmZoGQKZnn) | Bölümlerin durumunu, resmi depodan okunan teslim kontrolünü ve düzeltme geçmişini düzenli olarak kontrol etmek için kullandık. |
-| [Fiyat atölyesi](https://claude.ai/artifact/AY18JALeHhx2DQhFs5dADJ) | Verimiz üzerinde beş modeli tarayıcıda eğitip bölme yöntemlerini karşılaştıran bir sayfa yaptık. Veriye etkilerini izledik. |
 
 ## Katkı beyanı
 Her üyenin hangi alt başlıklarda ve hangi işlerde (kod, analiz, yorum, sunum hazırlığı) çalıştığı. Katkı puanı bu beyana göre verilir: somutluk %30, pay %30, GitHub commit geçmişiyle tutarlılık %25, sunumla tutarlılık %15.
