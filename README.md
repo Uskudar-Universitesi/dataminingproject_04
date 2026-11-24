@@ -64,4 +64,12 @@ https://data.insideairbnb.com/turkey/marmara/istanbul/<SNAPSHOT>/data/listings.c
 Ayrıntılar, grafikler ve bütün sayılar `BIL545_Proje1_Birlesik.ipynb` defterinde.
 
 ## Katkı beyanı
-_Ayrıntısı defterin sonundaki "Katkı beyanı" bölümündedir._
+Her üyenin hangi alt başlıklarda ve hangi işlerde (kod, analiz, yorum, sunum hazırlığı) çalıştığı. Katkı puanı bu beyana göre verilir: somutluk %30, pay %30, GitHub commit geçmişiyle tutarlılık %25, sunumla tutarlılık %15.
+
+| Üye | Çalıştığı alt başlıklar ve işler | Sunumda anlattığı alt başlık |
+|---|---|---|
+| Kübra Girit Kopuz | **Bölüm 1 (1.1–1.7):** veri künyesi, şüpheli öznitelik taraması ve sızıntı sütunlarının ayıklanması, eksik değer analizi ve `add_indicator` deneyi, kategorik kodlama karşılaştırması, ilana / ev sahibine göre bölme karşılaştırması, baseline ve ilk model, Weka ile bağımsız kontrol (ZeroR ve J48); bütün bölümlerin kullandığı **model tablosu ve ortak değerlendirme hattı** (`on_isleme`, `CV_GRUP`, `degerlendir`); Kaufman vd. (2012) okuma notu; kod, analiz ve yorumlar; sunum hazırlığı. | Bölüm 1 |
+| Barış Refik Aykent | **Bölüm 2 (2.1–2.5):** model karşılaştırması, karar ağacının yorumu, iç içe ÇD ile iyimser yanlılık, istatistik testler (5×2cv t, Alpaydın F, Nadeau–Bengio, McNemar, bootstrap, Holm) ve Proje 2'ye aktarım (model, OOF tahminleri, protokol dosyası); Dietterich (1998) okuma notu; kod, analiz ve yorumlar. **Ortak bölümler:** varsayım defteri ve kaynakların derlenmesi, README; sunum hazırlığı. | Bölüm 2 |
+| Elif Öztürk | **Bölüm 3 (3.1–3.4):** veri küpü ve kavram hiyerarşileri, dilimleme / yukarı toplama ve Simpson paradoksu analizi, işlem tablosu ve ayrıklaştırma (seçenek B), Apriori ve FP-Growth, lift–Kulczynski karşılaştırması, kuralların alan bilgisiyle yorumu, Weka Apriori ile birebir kontrol; Wu, Chen ve Han (2010) okuma notu; kod, analiz ve yorumlar; sunum hazırlığı. | Bölüm 3 |
+| Alicem Elverdi | **Ek paket 1 (E1.1–E1.3):** budama eğrisi ve bir standart hata kuralı, ağaç sayısı ile test ve OOB hatası, Gini önemi ile permütasyon öneminin rastgele kontrol sütunlarıyla karşılaştırılması; kod, analiz ve yorumlar; sunum hazırlığı. | Ek paket 1 |
+| Nurseda Akgül | **Ek paket 2 (E2.1–E2.3):** filtre, sarmalayıcı (RFE) ve gömülü öznitelik seçimi, ev sahibine göre alt örneklemlerle kararlılık analizi, seçimin katkısının Nadeau–Bengio testiyle ölçülmesi ve K duyarlılığı; Meinshausen ve Bühlmann (2010) okuma notu; kod, analiz ve yorumlar; sunum hazırlığı. | Ek paket 2 |
