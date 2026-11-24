@@ -52,7 +52,7 @@ https://data.insideairbnb.com/turkey/marmara/istanbul/<SNAPSHOT>/data/listings.c
 |---|---|
 | **En iyi skor** | Rastgele orman makro F1'de **0,663**, yani ilanların 3'te 2'sinin doğru dilimde olduğunu ortaya koyuyor. Rastgele tahmin 0,334'te kalıyor. Gradyan artırma biraz daha yüksek çıktı (0,667), ama gradyan artırma ile arasındaki fark anlamlı olmadığı için rastgele ormanı tercih ettik. |
 | **En zor dilim** | Orta dilim. Hem ucuzla hem pahalıyla sınırı olduğu için model en çok burada karışıyor. Ucuzu pahalı sanma gibi büyük hatalar ise az. |
-| **Fiyatı en çok belirleyenler** | En az kaç gece kalınması gerektiği (aylık kiralanan evler gecelik hesapta çok daha ucuz görünüyor), evin büyüklüğü (kapasite, yatak odası), lisans durumu ve konum. |
+| **Fiyatı en çok belirleyenler** | En az kaç gece kalınması gerektiği (aylık kiralanan evler gecelik hesapta çok daha ucuz görünüyor), evin büyüklüğü (kapasite, yatak odası), lisans durumu, oda tipi (tüm ev / özel oda) ve konum. |
 | **En büyük tuzak** | Aynı ev sahibinin birbirine çok benzeyen ilanları var. Bunlar hem eğitime hem teste düşerse model ezberleyip skoru yaklaşık **8 puan** şişiriyor. Bu yüzden bütün deneylerde veriyi ev sahibine göre böldük. |
 | **İstatistik testler** | İlanları birbirinden bağımsız sayan testler olmayan bir farkı "anlamlı" gösterdi. Ev sahibini hesaba katan testlerde bu fark kayboldu. |
 | **Birliktelik kuralları** | Örneğin "en az 100 gece → ucuz" ve "kısa kalış + 3 ve daha fazla yatak odası → pahalı" gibi kurallar, modelin önemli bulduğu özelliklerle aynı hikâyeyi anlatıyor. Weka aynı kuralları buldu. |
