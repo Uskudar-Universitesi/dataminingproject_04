@@ -7,7 +7,7 @@
 **Hedef:** Fiyat dilimi (`price` sütunundan türetilen sınıflar)  
 **Grup tipi:** 5 kişi (temel kapsam + Ek paket 1 + Ek paket 2)
 
-> **Depolar hakkında:** Çalışma sürecinde taslak (draft) depo olarak [efulii/datamining](https://github.com/efulii/datamining) kullanıldı; bölümlerin ayrı defterleri, ara sürümler ve düzeltme geçmişi orada. Bu depo (`dataminingproject_04`) ise temiz teslim için hazırlandı: birleşik teslim defterini, README'yi ve çalıştırma için gereken sürüm bilgisini içerir.
+> **Depolar hakkında:** Çalışma sürecinde taslak (draft) depo olarak [efulii/datamining · proje1](https://github.com/efulii/datamining/tree/main/proje1) kullanıldı; bölümlerin ayrı defterleri, ara sürümler ve düzeltme geçmişi orada. Bu depo (`dataminingproject_04`) ise temiz teslim için hazırlandı: birleşik teslim defterini, README'yi ve çalıştırma için gereken sürüm bilgisini içerir.
 
 ## Grup
 | | Ad Soyad | Öğrenci No |
