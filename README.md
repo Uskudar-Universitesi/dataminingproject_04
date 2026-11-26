@@ -37,25 +37,26 @@ https://data.insideairbnb.com/turkey/marmara/istanbul/<SNAPSHOT>/data/listings.c
 ```
 
 ## Defterlerin çalıştırılması
-1. `proje1/BIL545_Proje1_Birlesik.ipynb` dosyasını Colab'da açın: [Colab'da aç](https://colab.research.google.com/github/Uskudar-Universitesi/dataminingproject_04/blob/main/proje1/BIL545_Proje1_Birlesik.ipynb)
+1. `Grup04_resmi_depo/proje1/BIL545_Proje1_Birlesik.ipynb` dosyasını Colab'da açın: [Colab'da aç](https://colab.research.google.com/github/Uskudar-Universitesi/dataminingproject_04/blob/main/Grup04_resmi_depo/proje1/BIL545_Proje1_Birlesik.ipynb)
 2. **Çalışma Zamanı → Tümünü çalıştır** (yaklaşık 45 dakika). Sürümler ilk hücrede yazdırılır, tohum `SEED = 42`.
-3. Defterdeki sonuçlar Colab'ın scikit-learn 1.6.1 ve pandas 2.2.3 sürümleriyle üretildi; bütün sürümler `requirements.txt` dosyasında. Bölüm 3'te mlxtend 0.23.4'e sabitlendi; daha yeni mlxtend scikit-learn'ü yükseltip sonuçları değiştirebilir. Yerelde çalıştırmak için: `pip install -r requirements.txt`.
+3. Defterdeki sonuçlar Colab'ın scikit-learn 1.6.1 ve pandas 2.2.3 sürümleriyle üretildi; bütün sürümler `Grup04_resmi_depo/requirements.txt` dosyasında. Bölüm 3'te mlxtend 0.23.4'e sabitlendi; daha yeni mlxtend scikit-learn'ü yükseltip sonuçları değiştirebilir. Yerelde çalıştırmak için: `pip install -r Grup04_resmi_depo/requirements.txt`.
 4. Proje 2, Proje 1'in çıktılarını (`p1_temiz_veri.csv`, `p1_hat.joblib`) kullanır.
 
 ### Depo yapısı
 ```
 dataminingproject_04/
-├── README.md            bu dosya
-├── requirements.txt     sonuçların üretildiği paket sürümleri
-├── .gitignore           veri ve ara dosyaların depoya girmesini engeller
-└── proje1/
-    └── BIL545_Proje1_Birlesik.ipynb
+├── README.md                bu dosya
+└── Grup04_resmi_depo/
+    ├── requirements.txt     sonuçların üretildiği paket sürümleri
+    ├── .gitignore           veri ve ara dosyaların depoya girmesini engeller
+    └── proje1/
+        └── BIL545_Proje1_Birlesik.ipynb
 ```
 
 | Klasör | İçerik | Teslim |
 |---|---|---|
-| `proje1/` | Proje 1 defteri (vize): Bölüm 1–3, Ek paket 1–2, varsayım defteri, katkı ve yapay zekâ beyanları, kaynaklar | 8. hafta |
-| `proje2/` | Proje 2 defteri (final) | 14. hafta |
+| `Grup04_resmi_depo/proje1/` | Proje 1 defteri (vize): Bölüm 1–3, Ek paket 1–2, varsayım defteri, katkı ve yapay zekâ beyanları, kaynaklar | 8. hafta |
+| `Grup04_resmi_depo/proje2/` | Proje 2 defteri (final) | 14. hafta |
 
 ## Etkileşimli sayfalar
 | Sayfa | Ne için |
@@ -68,10 +69,11 @@ dataminingproject_04/
 
 | | Ne bulduk? |
 |---|---|
-| **En iyi skor** | Rastgele orman makro F1'de **0,663**, yani ilanların 3'te 2'sinin doğru dilimde olduğunu ortaya koyuyor. Rastgele tahmin 0,334'te kalıyor. Gradyan artırma biraz daha yüksek çıktı (0,667), ama gradyan artırma ile arasındaki fark anlamlı olmadığı için rastgele ormanı tercih ettik. |
+| **En iyi skor** | Rastgele orman makro F1'de **0,663** aldı. Dengeli doğruluğu da 0,663; yani dilimlerin ortalamasında ilanların yaklaşık 3'te 2'si doğru dilime düşüyor. Rastgele tahmin 0,334'te kalıyor. Gradyan artırma biraz daha yüksek çıktı (0,667), ama gradyan artırma ile arasındaki fark anlamlı olmadığı için rastgele ormanı tercih ettik. |
 | **En zor dilim** | Orta dilim. Hem ucuzla hem pahalıyla sınırı olduğu için model en çok burada karışıyor. Ucuzu pahalı sanma gibi büyük hatalar ise az. |
 | **Fiyatı en çok belirleyenler** | En az kaç gece kalınması gerektiği (aylık kiralanan evler gecelik hesapta çok daha ucuz görünüyor), evin büyüklüğü (kapasite, yatak odası), lisans durumu, oda tipi (tüm ev / özel oda) ve konum. |
 | **En büyük tuzak** | Aynı ev sahibinin birbirine çok benzeyen ilanları var. Bunlar hem eğitime hem teste düşerse model ezberleyip skoru yaklaşık **8 puan** şişiriyor. Bu yüzden bütün deneylerde veriyi ev sahibine göre böldük. |
+| **Kapsam kararı** | Uzun dönem (30 gece ve üstü) ilanları çıkarıp yeniden denedik: skor yaklaşık 0,02 düştü (orman 0,645), ama modellerin sıralaması değişmedi. Yani başarının büyük kısmı "aylık mı gecelik mi" ayrımından gelmiyor. |
 | **İstatistik testler** | İlanları birbirinden bağımsız sayan testler olmayan bir farkı "anlamlı" gösterdi. Ev sahibini hesaba katan testlerde bu fark kayboldu. |
 | **Birliktelik kuralları** | Örneğin "en az 100 gece → ucuz" ve "kısa kalış + 3 ve daha fazla yatak odası → pahalı" gibi kurallar, modelin önemli bulduğu özelliklerle aynı hikâyeyi anlatıyor. Weka aynı kuralları buldu. |
 | **Ek paket 1** | Budanmış küçük bir ağaç (36 yaprak), 4.000'den fazla yapraklı budanmamış ağaçtan daha iyi. Ormanın kendi OOB skoru gerçek test skorundan çok daha iyimser (0,754'e karşı 0,659). Hiçbir anlamı olmayan rastgele bir sütun bile Gini öneminde ortalarda çıkabiliyor. |
@@ -79,7 +81,7 @@ dataminingproject_04/
 
 **Sınırlar:** Elimizdeki fiyat, ev sahibinin istediği fiyat; gerçekten kiralanan fiyatı ya da doluluğu bilmiyoruz. Veri tek bir günün (25 Eylül 2026) fotoğrafı. Bulduklarımız ilişki, neden-sonuç değil: büyük bir ev açmak fiyatı yükseltmiyor, büyük evler zaten pahalı.
 
-Ayrıntılar, grafikler ve bütün sayılar `proje1/BIL545_Proje1_Birlesik.ipynb` defterinde.
+Ayrıntılar, grafikler ve bütün sayılar `Grup04_resmi_depo/proje1/BIL545_Proje1_Birlesik.ipynb` defterinde.
 
 ## Katkı beyanı
 Her üyenin hangi alt başlıklarda ve hangi işlerde (kod, analiz, yorum, sunum hazırlığı) çalıştığı. Katkı puanı bu beyana göre verilir: somutluk %30, pay %30, GitHub commit geçmişiyle tutarlılık %25, sunumla tutarlılık %15.
